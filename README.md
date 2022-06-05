@@ -18,6 +18,12 @@
   </a>
   <a href="https://gitee.com/Z568_568/maple.git">
     <img src="https://gitee.com/Z568_568/all-blog-sys/badge/fork.svg?theme=dark" alt="MIT License"/>
+  </a> 
+<a href="https://gitee.com/Z568_568/maple.git">
+    <img src="https://img.shields.io/badge/Fork-99+-green" alt="maintained with Ranger" />  
+  </a>
+  <a href="https://gitee.com/Z568_568/maple.git">
+    <img src="https://img.shields.io/badge/Fork-99+-green" alt="MIT License"/>
   </a>
 </p>
 
