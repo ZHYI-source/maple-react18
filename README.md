@@ -26,24 +26,12 @@
 **技术栈及版本信息**
 
 ```javascript
-    "node-sass"
-:
-"^7.0.1",
-    "react"
-:
-"^18.1.0",
-    "react-dom"
-:
-"^18.1.0",
-    "react-redux"
-:
-"^8.0.2",
-    "redux"
-:
-"^4.2.0",
-    "react-router-dom"
-:
-"^6.3.0",
+    "node-sass":"^7.0.1",
+    "react":"^18.1.0",
+    "react-dom":"^18.1.0",
+    "react-redux":"^8.0.2",
+    "redux":"^4.2.0",
+    "react-router-dom":"^6.3.0",
 ```
 
 ## 构建 Start
