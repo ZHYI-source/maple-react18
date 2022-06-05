@@ -1,6 +1,7 @@
 # maple-react
 
-[![code style: prettier](https://img.shields.io/badge/Star-99+-red)](https://github.com/prettier/prettier)
+[![Star:99+](https://img.shields.io/badge/Star-99+-red)](https://github.com/prettier/prettier)
+[![Fork:99+](https://img.shields.io/badge/Fork-99+-green)](https://github.com/prettier/prettier)
 
 
 这是一个使用 create-react-app创建的 React 脚手架<br/>
