@@ -1,4 +1,3 @@
-
 <p align="center">
   <img  src="./public/logo.png" height="80" />
 </p>
@@ -9,10 +8,6 @@
 重拾React知识，将不停的更新和优化本项目。
 </p>
 <p align="center">
-
-[![Star:99+](https://img.shields.io/badge/Star-99+-red)](https://github.com/prettier/prettier)
-[![Fork:99+](https://img.shields.io/badge/Fork-99+-green)](https://github.com/prettier/prettier)
-
   <a href="https://gitee.com/Z568_568/maple.git">
     <img src="https://gitee.com/Z568_568/all-blog-sys/badge/star.svg?theme=dark" alt="maintained with Ranger" />  
   </a>
@@ -20,7 +15,7 @@
     <img src="https://gitee.com/Z568_568/all-blog-sys/badge/fork.svg?theme=dark" alt="MIT License"/>
   </a> 
 <a href="https://gitee.com/Z568_568/maple.git">
-    <img src="https://img.shields.io/badge/Fork-99+-green" alt="maintained with Ranger" />  
+    <img src="https://img.shields.io/badge/Star-99+-red" alt="maintained with Ranger" />  
   </a>
   <a href="https://gitee.com/Z568_568/maple.git">
     <img src="https://img.shields.io/badge/Fork-99+-green" alt="MIT License"/>
@@ -28,18 +23,27 @@
 </p>
 
 
-
-
-
 **技术栈及版本信息**
 
 ```javascript
-    "node-sass": "^7.0.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-redux": "^8.0.2",
-    "redux": "^4.2.0",
-    "react-router-dom": "^6.3.0",
+    "node-sass"
+:
+"^7.0.1",
+    "react"
+:
+"^18.1.0",
+    "react-dom"
+:
+"^18.1.0",
+    "react-redux"
+:
+"^8.0.2",
+    "redux"
+:
+"^4.2.0",
+    "react-router-dom"
+:
+"^6.3.0",
 ```
 
 ## 构建 Start
@@ -52,7 +56,6 @@ npm run build		# 正式打包，用于生产环境
 npm run eject		# 列出隐藏webpack配置文件
 
 ```
- 
 
 ## 目录结构 Structure
 
