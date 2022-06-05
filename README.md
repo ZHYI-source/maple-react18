@@ -1,6 +1,6 @@
 # maple-react
 
-[![code style: prettier](https://img.shields.io/badge/start-56-red)](https://github.com/prettier/prettier)
+[![code style: prettier](https://img.shields.io/badge/star-56-red)](https://github.com/prettier/prettier)
 
 
 这是一个使用 create-react-app创建的 React 脚手架<br/>
