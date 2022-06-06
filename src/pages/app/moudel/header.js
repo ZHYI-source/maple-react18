@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
-class LayoutHeader extends Component {
+class Header extends Component {
     render() {
         return (
             <div>
@@ -12,4 +12,4 @@ class LayoutHeader extends Component {
     }
 }
 
-export default LayoutHeader;
+export default Header;

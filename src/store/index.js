@@ -2,11 +2,8 @@
 import { init } from "@rematch/core";
 
 import app from "./models/app";
-import test from "./models/test";
 
-export default init({
-  models: {
-    app,
-    test,
-  },
+const store = init({
+  app,
 });
+export default store

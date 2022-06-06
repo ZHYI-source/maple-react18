@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {Outlet} from "react-router-dom";
-import LayoutHeader from "./moudel/layout-header";
+import Header from "./moudel/header";
 import {Divider} from "antd";
-class Layout extends Component {
+
+class App extends Component {
     render() {
         return (
-            <div className="Layout">
+            <div className="app">
                 <section>
-                    <LayoutHeader/>
+                    <Header/>
                 </section>
                 <Divider/>
                 <section>
@@ -19,4 +20,4 @@ class Layout extends Component {
 }
 
 
-export default Layout;
+export default App;

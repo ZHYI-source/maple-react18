@@ -1,6 +1,6 @@
 import _import from '../utils/util.import'
 
-const Layout = _import('layout/layout')
+const App = _import('app/app')
 const Home = _import('home/index')
 const NotFound = _import('404/notFound')
 
@@ -8,7 +8,7 @@ const NotFound = _import('404/notFound')
 const mainRoutesList = [
     {
         path: '/',
-        element: <Layout/>,
+        element: <App/>,
         children: [
             {
                 index: true, //默认路由
