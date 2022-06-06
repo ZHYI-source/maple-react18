@@ -4,11 +4,22 @@ import './app.scss'
 import Header from "./moudel/header/header";
 import Logo from "../../assets/logo.png";
 import {BackTop} from "antd";
-
+const style = {
+    height: 30,
+    width: 30,
+    lineHeight: '30px',
+    borderRadius: 4,
+    backgroundColor: '#ff0000',
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 12,
+};
 const App = () => {
     return (
         <section className="app">
-            <BackTop />
+            <BackTop>
+                <div style={style}>TOP</div>
+            </BackTop>
             <section className="headerColumn">
                 <Header/>
             </section>
