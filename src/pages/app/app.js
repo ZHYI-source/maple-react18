@@ -3,10 +3,12 @@ import {Outlet} from "react-router-dom";
 import './app.scss'
 import Header from "./moudel/header/header";
 import Logo from "../../assets/logo.png";
+import {BackTop} from "antd";
 
 const App = () => {
     return (
         <section className="app">
+            <BackTop />
             <section className="headerColumn">
                 <Header/>
             </section>
@@ -20,12 +22,6 @@ const App = () => {
                             <span className='header-icon'>
                                 ✨
                             </span>
-                        </div>
-                        <div className='header-logos'>
-                           <img alt='logo' src={Logo}/>
-                        </div>
-                        <div className='header-input'>
-                            <textarea value="What's happening?"/>
                         </div>
                     </div>
                     <Outlet/>

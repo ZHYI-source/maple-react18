@@ -6,13 +6,14 @@
     border-bottom: 1px solid #eee;
     padding: 10px 0px;
     margin-top: 1px;
-    cursor: pointer;
+    cursor: auto;
     transition: all .2s linear;
     transition-property: background-color, box-shadow;
     &:hover {
       background-color: rgba(0,0,0,0.03);
     }
     .item-left {
+      cursor: pointer;
       img {
         width: 40px;
         height: 40px;
@@ -36,6 +37,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
         .author {
           font-family: TwitterChirpExtendedHeavy;
           font-weight: bold;
@@ -51,6 +53,7 @@
       }
       .body-post {
         padding: 5px;
+        cursor: pointer;
         .post-title {
           font-size: 16px;
           color: rgb(40, 51, 59);
@@ -66,6 +69,11 @@
           overflow-wrap: break-word;
         }
       }
+    }
+  }
+  .post-edit {
+    &:hover {
+      background-color: #fff;
     }
   }
 }
