@@ -1,0 +1,56 @@
+.post-list {
+  box-sizing: border-box;
+  .post-item {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0px;
+    .item-left {
+      img {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        margin: 8px;
+      }
+    }
+    .item-body {
+      box-sizing: border-box;
+      padding: 5px;
+      //background-color: #f3f3f3;
+      width: calc(100% - 65px);
+      border-radius: 8px;
+      word-break: break-all;
+      .body-header {
+        font-size: 13px;
+        color: rgb(83, 100, 113);
+        overflow-wrap: break-word;
+        .author {
+          font-family: TwitterChirpExtendedHeavy;
+          font-weight: bold;
+          .iconyanzhengma {
+            color: blue;
+            margin-right: 2px;
+          }
+        }
+      }
+      .body-post {
+        padding: 5px;
+        .post-title {
+          font-size: 16px;
+          color: rgb(40, 51, 59);
+          overflow-wrap: break-word;
+          font-weight: 600;
+          margin-top: 8px;
+        }
+        .post-content {
+          font-size: 15px;
+
+          color: rgb(40, 51, 59);
+          overflow-wrap: break-word;
+        }
+      }
+    }
+  }
+}
