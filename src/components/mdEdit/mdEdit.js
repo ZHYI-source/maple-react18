@@ -77,8 +77,11 @@ function onImageUpload(file) {
 const MdEdit = () => {
     return (
         <div>
-            <MdEditor style={{height: '300px',borderRadius:'5px',overflow:'hidden'}}
+            <MdEditor style={{height: '100px',borderRadius:'5px',overflow:'hidden'}}
                       plugins={plugins}
+
+                      view={{ menu: false, md: true, html: false }}
+                      placeholder='输入内容...'
                       renderHTML={renderHTML}
                       onImageUpload={onImageUpload}
                       onChange={handleEditorChange}/>

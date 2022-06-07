@@ -44,7 +44,6 @@
 }
 
 .app {
-  height: calc(100vh);
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
@@ -52,8 +51,6 @@
   font-family: 'TwitterChirp';
   display: flex;
   justify-content: center;
-  position: relative;
-
   .headerColumn {
     user-select: none;
     width: 200px;
@@ -82,6 +79,7 @@
         line-height: 50px;
         top: 0px;
         z-index: 3;
+
         .primary-header {
           font-weight: 600;
           font-size: 18px;
