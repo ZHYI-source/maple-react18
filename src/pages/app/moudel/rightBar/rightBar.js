@@ -53,8 +53,13 @@ const RightBar = () => {
                     </div>
                 </div>
                 <nav className='right-footer'>
-                    Copyright ©2022 by<a href="https://ant.design"> @书中枫叶 </a>. All rights reserved. | <a
-                    href="https://ant.design">黔ICP备2022001745号-1</a>
+                    <ul>
+                        <li>Copyright ©2022 </li>
+                        <li>by<a href="https://ant.design"> @书中枫叶 </a>.</li>
+                        <li> All rights reserved. | <a
+                            href="https://ant.design">黔ICP备2022001745号-1</a></li>
+                    </ul>
+
                 </nav>
             </div>
         </section>

@@ -36,7 +36,7 @@ const App = () => {
                             </span>
                         </div>
                     </div>
-                    <div style={{paddingTop:'60px'}}>
+                    <div style={{paddingTop:'50px'}}>
                         <Outlet/>
                     </div>
                 </section>
