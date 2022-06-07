@@ -77,17 +77,16 @@ function onImageUpload(file) {
 const MdEdit = () => {
     return (
         <div>
-            <MdEditor style={{height: '100px',borderRadius:'5px',overflow:'hidden'}}
+            <MdEditor style={{height: '150px',borderRadius:'5px',overflow:'hidden'}}
                       plugins={plugins}
-
-                      view={{ menu: false, md: true, html: false }}
-                      placeholder='输入内容...'
+                      view={{ menu: true, md: true, html: false }}
+                      placeholder='Please enter your thoughts...'
                       renderHTML={renderHTML}
                       onImageUpload={onImageUpload}
                       onChange={handleEditorChange}/>
         </div>
-    );
-}
+    )
+};
 
 export default MdEdit;
 // https://github.com/HarryChen0506/react-markdown-editor-lite/blob/b7f32d3e6be67e2203c0404995a2a6a5d8ad8fd7/docs/configure.zh-CN.md

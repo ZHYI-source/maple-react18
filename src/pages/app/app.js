@@ -4,6 +4,7 @@ import './app.scss'
 import Header from "./moudel/header/header";
 import Logo from "../../assets/logo.png";
 import {BackTop} from "antd";
+import RightBar from "./moudel/rightBar/rightBar";
 const style = {
     height: 30,
     width: 30,
@@ -35,10 +36,12 @@ const App = () => {
                             </span>
                         </div>
                     </div>
-                    <Outlet/>
+                    <div style={{paddingTop:'60px'}}>
+                        <Outlet/>
+                    </div>
                 </section>
                 <section className="sidebarColumn">
-                    123
+                    <RightBar/>
                 </section>
             </section>
         </section>

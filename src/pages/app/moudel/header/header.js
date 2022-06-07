@@ -27,7 +27,7 @@ const Header = () => {
                 <span className='item-icon'>#</span>
                 <span className='item-name'>More</span>
             </div>
-            <Button type="primary" size='large' className='head-btn'>Tweet</Button>
+            <Button type="primary" size='large' shape="round"  className='head-btn'>Tweet</Button>
         </nav>
     );
 }
