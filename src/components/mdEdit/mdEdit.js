@@ -1,13 +1,32 @@
 // import react, react-markdown-editor-lite, and a markdown parser you like
 import React from 'react';
-import * as ReactDOM from 'react-dom';
+
 import MarkdownIt from 'markdown-it';
-import MdEditor, { Plugins } from 'react-markdown-editor-lite';
+import MdEditor, {Plugins} from 'react-markdown-editor-lite';
 // import style manually
 import 'react-markdown-editor-lite/lib/index.css';
-
+import emoji from 'markdown-it-emoji'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/atom-one-light.css'
+// import 'highlight.js/styles/monokai.css'
 // Initialize a markdown parser
-const mdParser = new MarkdownIt(/* Markdown-it options */);
+//https://markdown-it.docschina.org/#%E7%94%A8%E6%B3%95%E7%A4%BA%E4%BE%8B
+const mdParser = new MarkdownIt(
+    {
+        html: true,
+        linkify: true,
+        typographer: true,
+        highlight: function (str, lang) {
+            if (lang && hljs.getLanguage(lang)) {
+                try {
+                    return hljs.highlight(lang, str).value
+                } catch (__) {
+                }
+            }
+            return '' // use external default escaping
+        }
+    }
+).use(emoji, [{"smile": [":)", ":-)"], "laughing": ":D"}]);
 const plugins = [
     'header',
     'font-bold',
@@ -24,19 +43,28 @@ const plugins = [
     'image',
     'link',
     'clear',
+    'emoji',
     // 'logger',
     'mode-toggle',
     'full-screen',
     'tab-insert'
 ];
+
 // Finish!
-function handleEditorChange({ html, text }) {
+function handleEditorChange({html, text}) {
     console.log('handleEditorChange', html, text);
 }
+
 function renderHTML(text) {
     // 使用 markdown-it
-    return mdParser.render(text);
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(mdParser.render(text))
+        }, 1000)
+    })
+
 }
+
 //图片上传
 function onImageUpload(file) {
     console.log(file)
@@ -46,15 +74,15 @@ function onImageUpload(file) {
     // };
     // reader.readAsDataURL(file);
 }
-const MdEdit = () => {
 
+const MdEdit = () => {
     return (
         <div>
-            <MdEditor style={{ height: '300px' }}
+            <MdEditor style={{height: '300px'}}
                       plugins={plugins}
                       renderHTML={renderHTML}
                       onImageUpload={onImageUpload}
-                      onChange={handleEditorChange} />
+                      onChange={handleEditorChange}/>
         </div>
     );
 }
