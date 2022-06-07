@@ -2,23 +2,32 @@ import React, {useState} from 'react';
 import './home.scss'
 import Logo from '../../assets/logo.png'
 import {Divider} from "antd";
-import RichEdit from "../../components/richEdit";
+import RichEdit from "../../components/rechEdit/richEdit";
+import MdEdit from "../../components/mdEdit/mdEdit";
 const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 const Index = () => {
 
     return (
         <section className='post-list'>
+            {/*<article className='post-item post-edit'>*/}
+            {/*    <div className="item-left">*/}
+            {/*        <img alt='logo' src={Logo}/>*/}
+            {/*    </div>*/}
+            {/*    <div className='item-body'>*/}
+            {/*         <RichEdit/>*/}
+            {/*    </div>*/}
+            {/*</article>*/}
             <article className='post-item post-edit'>
                 <div className="item-left">
                     <img alt='logo' src={Logo}/>
                 </div>
                 <div className='item-body'>
-                     <RichEdit/>
+                    <MdEdit/>
                 </div>
             </article>
             {
                 arr.map((item)=> {
-                    return <article className='post-item'>
+                    return <article className='post-item' key={item}>
                         <div className="item-left">
                             <img alt='logo' src={Logo}/>
                         </div>
