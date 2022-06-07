@@ -1,6 +1,5 @@
-// import react, react-markdown-editor-lite, and a markdown parser you like
-import React from 'react';
 
+import React from 'react';
 import MarkdownIt from 'markdown-it';
 import MdEditor, {Plugins} from 'react-markdown-editor-lite';
 // import style manually
@@ -78,7 +77,7 @@ function onImageUpload(file) {
 const MdEdit = () => {
     return (
         <div>
-            <MdEditor style={{height: '300px'}}
+            <MdEditor style={{height: '300px',borderRadius:'5px',overflow:'hidden'}}
                       plugins={plugins}
                       renderHTML={renderHTML}
                       onImageUpload={onImageUpload}
