@@ -44,7 +44,7 @@ const RightBar = () => {
                                 <List.Item>
                                     <List.Item.Meta
                                         avatar={<Avatar src="https://joeschmoe.io/api/v1/random"/>}
-                                        title={<a href="https://ant.design">{item.title}</a>}
+                                        title={<a href="http://www.zhouyi.run/#/">{item.title}</a>}
                                         description="Ant Design, a design language for background applications, is refined by Ant UED Team"
                                     />
                                 </List.Item>
@@ -55,9 +55,9 @@ const RightBar = () => {
                 <nav className='right-footer'>
                     <ul>
                         <li>Copyright ©2022 </li>
-                        <li>by<a href="https://ant.design"> @书中枫叶 </a>.</li>
+                        <li>by<a href="https://gitee.com/Z568_568"> @书中枫叶 </a>.</li>
                         <li> All rights reserved. | <a
-                            href="https://ant.design">黔ICP备2022001745号-1</a></li>
+                            href="https://beian.miit.gov.cn/#/Integrated/index">黔ICP备2022001745号-1</a></li>
                     </ul>
 
                 </nav>
