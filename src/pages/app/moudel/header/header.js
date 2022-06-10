@@ -1,21 +1,24 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {NavLink,useNavigate} from "react-router-dom";
 import './header.scss'
 import logo from '../../../../assets/logo.png'
 import {Button} from "antd";
 
-const Header = () => {
+const Header = (props) => {
+    const navigate = useNavigate()
+    const goRouter=(path)=>{
+        navigate(path)
+    }
     return (
-        // <NavLink to='/' style={(isActive) => ({color: isActive ? 'red' : '#28cd00'})}># Home</NavLink>
         <nav className="header-box">
             <div className='header-logo'>
                 <img alt='logo' src={logo}/>
             </div>
-            <div className='nav-item'>
+            <div className='nav-item' onClick={()=>goRouter('/')}>
                 <span className='item-icon'>#</span>
                 <span className='item-name'>Home</span>
             </div>
-            <div className='nav-item'>
+            <div className='nav-item' onClick={()=>goRouter('/notice')}>
                 <span className='item-icon'>#</span>
                 <span className='item-name'>Notifications</span>
             </div>

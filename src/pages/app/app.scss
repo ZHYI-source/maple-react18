@@ -43,6 +43,34 @@
   font-display: 'swap';
 }
 
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  /*滚动条里面小方块*/
+  border-radius   : 10px;
+  background-color: #f54836;
+  background-image: -webkit-linear-gradient(
+                  45deg,
+                  rgba(255, 255, 255, 0.2) 25%,
+                  transparent 25%,
+                  transparent 50%,
+                  rgba(255, 255, 255, 0.2) 50%,
+                  rgba(255, 255, 255, 0.2) 75%,
+                  transparent 75%,
+                  transparent
+  );
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : #ededed;
+  border-radius: 10px;
+}
+
 .app {
   box-sizing: border-box;
   padding: 0px;
@@ -61,13 +89,14 @@
   .main {
     display: flex;
     justify-content: flex-start;
-
+    box-sizing: border-box;
     .primaryColumn {
       width: 600px;
       box-sizing: border-box;
       padding-top: 15px;
       border-right: 1px solid #eee;
-
+      //height: calc(100vh - 30px);
+      height: 100vh;
       .primary-top {
         border-bottom: 1px solid #eee;
         background-color: rgba(255, 255, 255, 0.85);
@@ -121,7 +150,7 @@
 
     .sidebarColumn {
       width: 350px;
-      height: 100vh;
+      //height: 100vh;
       position: relative;
       margin-left: 10px;
       box-sizing: border-box;
