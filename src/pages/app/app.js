@@ -16,6 +16,10 @@ const style = {
     fontSize: 12,
 };
 const App = () => {
+    //打开菜单
+    const openMenu = ()=>{
+        alert('打开菜单')
+    }
     return (
         <section className="app">
             <BackTop>
@@ -31,9 +35,12 @@ const App = () => {
                             <span className='header-title'>
                                 HOME
                             </span>
-                            <span className='header-icon'>
+                            <span className='header-icon' onClick={openMenu}>
                                 ✨
                             </span>
+                        </div>
+                        <div className='menuList'>
+
                         </div>
                     </div>
                     <div>

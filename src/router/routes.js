@@ -2,7 +2,7 @@ import _import from '../utils/util.import'
 import Notice from "../pages/notice/notice";
 
 const App = _import('app/app')
-const Home = _import('home/index')
+const Home = _import('home/home')
 const NotFound = _import('404/notFound')
 
 //路由结构表

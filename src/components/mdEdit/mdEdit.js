@@ -77,7 +77,7 @@ function onImageUpload(file) {
 const MdEdit = () => {
     return (
         <div>
-            <MdEditor style={{height: '150px',borderRadius:'5px',overflow:'hidden'}}
+            <MdEditor style={{height: '205px',borderRadius:'5px',overflow:'hidden'}}
                       plugins={plugins}
                       view={{ menu: true, md: true, html: false }}
                       placeholder='Please enter your thoughts...'

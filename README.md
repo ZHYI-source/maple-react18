@@ -66,9 +66,9 @@ npm run eject		# 列出隐藏webpack配置文件
 │   ├── router                          # 路由配置
 │   ├── store                           # 状态管理
 |   ├── ├── models                      # 模块（包含store数据/reducers/actions）
-|   ├── ├── index.js                    # 状态管理主文件
+|   ├── ├── home.js                    # 状态管理主文件
 │   ├── util                            # 自定义工具
-│   ├── index.js                        # 项目入口JS
+│   ├── home.js                        # 项目入口JS
 ├── webpack.dev.config.js		# 用于开发环境的webpack配置
 └── webpack.production.config.js	# 用于生产环境正式打包的webpack配置
 └── setupProxy.js                       # 代理中间件

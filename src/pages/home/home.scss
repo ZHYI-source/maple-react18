@@ -1,5 +1,9 @@
 .post-list {
   box-sizing: border-box;
+  padding-top: 15px;
+  .home-notice {
+    padding: 10px;
+  }
   .post-item {
     display: flex;
     justify-content: flex-start;
@@ -9,6 +13,7 @@
     cursor: auto;
     transition: all .2s linear;
     transition-property: background-color, box-shadow;
+    animation: one-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     &:hover {
       background-color: rgba(0,0,0,0.03);
     }
@@ -95,5 +100,16 @@
         margin-right: 8px;
       }
     }
+  }
+}
+
+@keyframes one-in {
+  from {
+    padding-top: 100px;
+    height: 0%;
+  }
+  to {
+    padding-top: 0px;
+    height: 100%;
   }
 }

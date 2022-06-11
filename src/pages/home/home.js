@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import './home.scss'
 import Logo from '../../assets/logo.png'
-import {Button, Divider, Popover} from "antd";
-import RichEdit from "../../components/rechEdit/richEdit";
+import {Alert, Button, Divider, Popover} from "antd";
 import MdEdit from "../../components/mdEdit/mdEdit";
 import {CommentOutlined, EyeOutlined, LikeOutlined, SendOutlined, SubnodeOutlined} from "@ant-design/icons";
-const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+import Marquee from 'react-fast-marquee';
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 const avt = 'https://joeschmoe.io/api/v1/random'
 
 
-const Index = () => {
+const Home = () => {
 
     const [visible, setVisible] = useState(false);
 
@@ -18,21 +18,13 @@ const Index = () => {
     };
 
     const handleVisibleChange = (newVisible) => {
-        console.log(newVisible)
         setVisible(newVisible);
     };
 
 
     return (
         <section className='post-list'>
-            {/*<article className='post-item post-edit'>*/}
-            {/*    <div className="item-left">*/}
-            {/*        <img alt='logo' src={Logo}/>*/}
-            {/*    </div>*/}
-            {/*    <div className='item-body'>*/}
-            {/*         <RichEdit/>*/}
-            {/*    </div>*/}
-            {/*</article>*/}
+            {/*主页发布*/}
             <article className='post-item post-edit'>
                 <div className="item-left">
                     <img alt='logo' src={Logo}/>
@@ -40,13 +32,15 @@ const Index = () => {
                 <div className='item-body'>
                     <MdEdit/>
                     <div className='pub-opt'>
-                        <Button type='primary' className='opt-btn' shape="round" icon={<SendOutlined />}>Publish</Button>
-                        <Button type='info' className='opt-btn' shape="round" icon={<SubnodeOutlined />}>Draft</Button>
+                        <Button type='primary' className='opt-btn' shape="round" icon={<SendOutlined/>}>Publish</Button>
+                        <Button type='info' className='opt-btn' shape="round" icon={<SubnodeOutlined/>}>Draft</Button>
                     </div>
                 </div>
             </article>
+
+
             {
-                arr.map((item)=> {
+                arr.map((item) => {
                     return <article className='post-item' key={item}>
                         <div className="item-left">
                             <img alt='logo' src={avt}/>
@@ -68,23 +62,27 @@ const Index = () => {
                                     <span className="more">···</span>
                                 </Popover>
                             </div>
+
                             <div className='body-post'>
                                 <div className='post-title'>
+
                                     忘记明天的日子
                                 </div>
                                 <div className='post-content'>
-                                    Statements of actor Salman Khan and his father Salim Khan have been recorded by Mumbai Police after the actor received a threat letter yesterday, June 5. Statements of a total of 4 people have been recorded so far: Mumbai Police
+                                    Statements of actor Salman Khan and his father Salim Khan have been recorded by
+                                    Mumbai Police after the actor received a threat letter yesterday, June 5. Statements
+                                    of a total of 4 people have been recorded so far: Mumbai Police
                                 </div>
                             </div>
                             <div className='body-opt'>
                                 <div className='opt-item'>
-                                    <CommentOutlined /> 32
-                                </div >
-                                <div className='opt-item'>
-                                    <EyeOutlined /> 99+
+                                    <CommentOutlined/> 32
                                 </div>
                                 <div className='opt-item'>
-                                    <LikeOutlined /> 99+
+                                    <EyeOutlined/> 99+
+                                </div>
+                                <div className='opt-item'>
+                                    <LikeOutlined/> 99+
                                 </div>
 
                             </div>
@@ -97,4 +95,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Home;

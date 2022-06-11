@@ -5,15 +5,30 @@
  * */
 
 /** 所需的各种插件 **/
-import React from "react";
-import { Provider } from "react-redux";
+import React, {useEffect, useState} from "react";
+import {Provider, useDispatch} from "react-redux";
 import store from "../store";
 import RouterView from "../router/index";
+import {initComputeTime} from "../store/models/systemSlice";
+import {getTimeInterval} from "../utils/util.sys";
 
 export default function RootContainer() {
-  return (
-    <Provider store={store}>
-      <RouterView />
-    </Provider>
-  );
+    const dispatch = useDispatch()
+    // 后台获取系统运行时间
+    const runAt = '1644422400000'; //2022-02-10 00:00:00
+    function initRunTime() {
+        //初始化运行时间
+        setInterval(() => {
+            dispatch(initComputeTime(getTimeInterval(runAt)))
+        }, 1000);
+    }
+
+    useEffect(() => {
+        initRunTime()
+    });
+    return (
+        <Provider store={store}>
+            <RouterView/>
+        </Provider>
+    );
 }

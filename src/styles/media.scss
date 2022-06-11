@@ -3,7 +3,9 @@
  * @date 2022/6/11 20:32
  * @dec:处理自适应样式
  */
-@media (max-width: 800px) {
+
+/***************************************/
+@media (max-width: 500px) {
   .app {
     grid-template-columns:auto !important;
 
@@ -11,15 +13,20 @@
       display: none !important;
     }
 
+    .primaryColumn {
+      border-right: 1px solid #eee;
+    }
+
   }
 }
 
-@media (max-width: 960px) {
+/***************************************/
+
+@media (max-width: 1000px) {
   .app .main {
     grid-template-columns:auto !important;
 
   }
-
   .sidebarColumn {
     display: none;
   }

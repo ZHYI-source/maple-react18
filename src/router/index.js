@@ -1,9 +1,10 @@
 import React, {Suspense} from 'react';
 import {HashRouter, Route, Routes} from "react-router-dom";
 import mainRoutesList from "./routes";
+import {Loading} from "../components/loading/loading";
 
-const routeAuth =(obj)=>{
-    console.log(obj)
+const routeAuth = (obj) => {
+
     return obj.element
 }
 //处理路由渲染结构
@@ -11,7 +12,7 @@ const renderRouter = (routerList) => {
     return routerList.map((item) => {
         // const { path, exact, noAuth, children } = item;
         const token = localStorage.getItem('token')
-        console.log(token)
+
         // if (!token) return <Route path="*" element={<SonA/>} />;
 
         //路由拦截
@@ -40,13 +41,13 @@ const renderRouter = (routerList) => {
 //路由渲染
 const RoutersView = () => {
     return (
-            <HashRouter>
-                <Suspense fallback={<div>loading...</div>}>
-                    <Routes>
-                        {renderRouter(mainRoutesList)}
-                    </Routes>
-                </Suspense>
-            </HashRouter>
+        <HashRouter>
+            <Suspense fallback={<Loading/>}>
+                <Routes>
+                    {renderRouter(mainRoutesList)}
+                </Routes>
+            </Suspense>
+        </HashRouter>
     )
 }
 export default React.memo(RoutersView)
