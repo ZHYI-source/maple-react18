@@ -1,13 +1,11 @@
+
 .header-box {
   box-sizing: border-box;
   position: fixed;
   top: 0;
   display: flex;
   flex-direction: column;
-  height: calc(100vh);
-  width: 200px;
-  border-right: 1px solid #eee;
-  z-index: 3;
+  min-width: 198px;
   background-color: #fff;
   .header-logo {
     padding: 0px 8px;

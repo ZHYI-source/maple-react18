@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import todosReducer from './models/todosSlice'
+import counterReducer from './models/counterSlice'
 
 
 const store = configureStore({
     reducer: {
         //引入所有reducer模块
-        todos: todosReducer,
+        counter: counterReducer,
     }
 })
 
