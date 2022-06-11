@@ -1,0 +1,26 @@
+/**
+ * @author zhouyi
+ * @date 2022/6/11 20:32
+ * @dec:处理自适应样式
+ */
+@media (max-width: 800px) {
+  .app {
+    grid-template-columns:auto !important;
+
+    .headerColumn {
+      display: none !important;
+    }
+
+  }
+}
+
+@media (max-width: 960px) {
+  .app .main {
+    grid-template-columns:auto !important;
+
+  }
+
+  .sidebarColumn {
+    display: none;
+  }
+}

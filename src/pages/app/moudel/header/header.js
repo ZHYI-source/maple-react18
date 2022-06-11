@@ -11,7 +11,7 @@ const Header = (props) => {
     }
     return (
         <nav className="header-box">
-            <div className='header-logo'>
+            <div className='header-logo' onClick={()=>goRouter('/')}>
                 <img alt='logo' src={logo}/>
             </div>
             <div className='nav-item' onClick={()=>goRouter('/')}>
