@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Outlet} from "react-router-dom";
+import {Outlet, useNavigate} from "react-router-dom";
 import './app.scss'
 import Header from "./moudel/header/header";
 import Logo from "../../assets/logo.png";
@@ -19,6 +19,10 @@ const style = {
 };
 const App = () => {
     const [visible,setVisible]=useState(false)
+    const navigate = useNavigate()
+    const goRouter=(path)=>{
+        navigate(path)
+    }
     //打开菜单
     const openMenu = ()=>{
         setVisible(true)
@@ -38,7 +42,7 @@ const App = () => {
                 <section className="primaryColumn">
                     <div className='primary-top'>
                         <div className='primary-header'>
-                            <span className='header-title'>
+                            <span className='header-title' onClick={()=>{goRouter('/')}}>
                                  <Avatar className='primary-logo' src="https://joeschmoe.io/api/v1/random" />
                                  <span className='page-name'>HOME</span>
                             </span>
