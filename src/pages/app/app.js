@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import {Outlet, useNavigate} from "react-router-dom";
-import './app.scss'
+import {Avatar, BackTop, Drawer, Input} from "antd";
+import {SearchOutlined} from "@ant-design/icons";
 import Header from "./moudel/header/header";
-import Logo from "../../assets/logo.png";
-import {Avatar, BackTop, Button, Drawer} from "antd";
 import RightBar from "./moudel/rightBar/rightBar";
-import {relativeSize} from "tailwindcss/lib/util/dataTypes";
 import MenuList from "../../components/menuList/menuList";
+import './app.scss'
+import Search from "antd/es/input/Search";
+import HeaderSearch from "./moudel/header/header-search/header-search";
+
 const style = {
     height: 30,
     width: 30,
@@ -18,16 +20,16 @@ const style = {
     fontSize: 12,
 };
 const App = () => {
-    const [visible,setVisible]=useState(false)
+    const [visible, setVisible] = useState(false)
     const navigate = useNavigate()
-    const goRouter=(path)=>{
+    const goRouter = (path) => {
         navigate(path)
     }
     //打开菜单
-    const openMenu = ()=>{
+    const openMenu = () => {
         setVisible(true)
     }
-    const onClose = ()=>{
+    const onClose = () => {
         setVisible(false)
     }
     return (
@@ -42,10 +44,13 @@ const App = () => {
                 <section className="primaryColumn">
                     <div className='primary-top'>
                         <div className='primary-header'>
-                            <span className='header-title' onClick={()=>{goRouter('/')}}>
-                                 <Avatar className='primary-logo' src="https://joeschmoe.io/api/v1/random" />
+                            <span className='header-title' onClick={() => {
+                                goRouter('/')
+                            }}>
+                                 <Avatar className='primary-logo' src="https://joeschmoe.io/api/v1/random"/>
                                  <span className='page-name'>HOME</span>
                             </span>
+                           <HeaderSearch/>
                             <span className='header-icon' onClick={openMenu}>
                                 ✨
                             </span>
@@ -59,9 +64,9 @@ const App = () => {
                     <RightBar/>
                 </section>
             </section>
-        {/*    右侧抽屉*/}
+            {/*    右侧抽屉*/}
             <Drawer title="Maple" width={255} placement="right" onClose={onClose} visible={visible}>
-               <MenuList onClose={onClose}/>
+                <MenuList onClose={onClose}/>
             </Drawer>
         </section>
     );

@@ -11,18 +11,22 @@
 
     .headerColumn {
       display: none !important;
+
     }
 
     .primaryColumn {
       border-right: 1px solid #eee;
+
       .primary-logo {
-        display: inline-block!important;
+        display: inline-block !important;
       }
+
       .page-name {
         display: none;
       }
+
       .header-icon {
-        display: inline-block!important;
+        display: inline-block !important;
       }
     }
 
@@ -34,8 +38,11 @@
 @media (max-width: 1000px) {
   .app .main {
     grid-template-columns:auto !important;
-    .primaryColumn {
 
+    .primaryColumn {
+      .header-search {
+        display: inline-block!important;
+      }
     }
 
   }
