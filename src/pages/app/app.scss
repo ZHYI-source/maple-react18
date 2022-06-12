@@ -138,12 +138,19 @@ html, body {
           font-size: 18px;
           display: flex;
           justify-content: space-between;
-          line-height: 30px;
-
+          line-height: 44px;
+          .header-title {
+            cursor: pointer;
+            &:hover {
+              color: #e00404;
+            }
+          }
           .header-icon {
             cursor: pointer;
           }
-
+          .primary-logo {
+            display: none;
+          }
         }
 
         .header-logos {
@@ -171,9 +178,10 @@ html, body {
 
           }
         }
+        
+
       }
     }
-
     .sidebarColumn {
       height: 100vh;
       position: relative;
@@ -181,5 +189,15 @@ html, body {
       border-left: 1px solid #eee;
     }
 
+
+  }
+  .drawer-head {
+    height: 100px;
+    background-color: #9e2d2d;
+    padding-top: 30px;
+    position: relative;
+    .header-box {
+      position: relative!important;
+    }
   }
 }
