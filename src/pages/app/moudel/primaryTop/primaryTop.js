@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Avatar} from "antd";
 import HeaderSearch from "../headerSearch/headerSearch";
 import {useNavigate} from "react-router-dom";
 import './primaryTop.scss'
 
 const PrimaryTop = (props) => {
-    const [visible, setVisible] = useState(false)
     const navigate = useNavigate()
     const goRouter = (path) => {
         navigate(path)
