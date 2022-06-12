@@ -1,9 +1,15 @@
 import React from 'react';
+import CommentBoard from "../../../components/commentBoard/commentBoard";
+
+import './articleDetail.scss'
+
 //文章详情
 const ArticleDetail = () => {
     return (
         <section className='article-detail-box'>
-            我是详情
+            <div className='article-comments'>
+                <CommentBoard/>
+            </div>
         </section>
     );
 };
