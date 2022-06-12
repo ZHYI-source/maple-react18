@@ -5,6 +5,7 @@ import {Alert, Button, Divider, Popover} from "antd";
 import MdEdit from "../../components/mdEdit/mdEdit";
 import {CommentOutlined, EyeOutlined, LikeOutlined, SendOutlined, SubnodeOutlined} from "@ant-design/icons";
 import Marquee from 'react-fast-marquee';
+import {useNavigate} from "react-router-dom";
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 const avt = 'https://joeschmoe.io/api/v1/random'
 
@@ -12,15 +13,17 @@ const avt = 'https://joeschmoe.io/api/v1/random'
 const Home = () => {
 
     const [visible, setVisible] = useState(false);
-
+    const navigate = useNavigate()
     const hide = () => {
         setVisible(false);
     };
-
     const handleVisibleChange = (newVisible) => {
         setVisible(newVisible);
     };
 
+    const goRouter=(path)=>{
+        navigate(path)
+    }
 
     return (
         <section className='post-list'>
@@ -37,11 +40,9 @@ const Home = () => {
                     </div>
                 </div>
             </article>
-
-
             {
                 arr.map((item) => {
-                    return <article className='post-item' key={item}>
+                    return <article className='post-item' key={item} onClick={()=>{goRouter('/articleDetail')}}>
                         <div className="item-left">
                             <img alt='logo' src={avt}/>
                         </div>
@@ -87,7 +88,6 @@ const Home = () => {
 
                             </div>
                         </div>
-
                     </article>
                 })
             }

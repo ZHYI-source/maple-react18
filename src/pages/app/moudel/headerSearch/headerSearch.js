@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {SearchOutlined} from "@ant-design/icons";
-import './header-search.scss'
+import './headerSearch.scss'
 const HeaderSearch = () => {
     const [show,setShow]=useState(true)
     return (

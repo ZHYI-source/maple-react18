@@ -1,8 +1,9 @@
 import _import from '../utils/util.import'
-import Notice from "../pages/notice/notice";
 
 const App = _import('app/app')
+const Notice = _import('notice/notice')
 const Home = _import('home/home')
+const ArticleDetail = _import('home/article/articleDetail')
 const NotFound = _import('404/notFound')
 
 //路由结构表
@@ -24,6 +25,14 @@ const mainRoutesList = [
                 element: <Notice/>,
                 meta: {
                     title: '通知',
+                    needLogin: true,
+                    roleId: 10000,
+                },
+            },
+            {   path: '/articleDetail',
+                element: <ArticleDetail/>,
+                meta: {
+                    title: '文章详情',
                     needLogin: true,
                     roleId: 10000,
                 },

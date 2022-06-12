@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import {Outlet, useNavigate} from "react-router-dom";
 import {Avatar, BackTop, Drawer, Input} from "antd";
-import {SearchOutlined} from "@ant-design/icons";
 import Header from "./moudel/header/header";
 import RightBar from "./moudel/rightBar/rightBar";
 import MenuList from "../../components/menuList/menuList";
+import HeaderSearch from "./moudel/headerSearch/headerSearch";
 import './app.scss'
-import Search from "antd/es/input/Search";
-import HeaderSearch from "./moudel/header/header-search/header-search";
+import PrimaryTop from "./moudel/primaryTop/primaryTop";
 
 const style = {
     height: 30,
@@ -42,20 +41,7 @@ const App = () => {
             </section>
             <section className="main">
                 <section className="primaryColumn">
-                    <div className='primary-top'>
-                        <div className='primary-header'>
-                            <span className='header-title' onClick={() => {
-                                goRouter('/')
-                            }}>
-                                 <Avatar className='primary-logo' src="https://joeschmoe.io/api/v1/random"/>
-                                 <span className='page-name'>HOME</span>
-                            </span>
-                           <HeaderSearch/>
-                            <span className='header-icon' onClick={openMenu}>
-                                ✨
-                            </span>
-                        </div>
-                    </div>
+                    <PrimaryTop openMenu={openMenu} onClose={onClose}/>
                     <div>
                         <Outlet/>
                     </div>
