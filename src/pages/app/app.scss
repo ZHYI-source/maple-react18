@@ -76,17 +76,20 @@
 html, body {
   //滚动更丝滑
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 .app {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  position: relative;
   font-family: 'TwitterChirp';
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr;
+  //铺满屏幕消除滚动条
+  position: absolute;
+  top: 0px;
+  left: 0px;
   //网格背景
   background: #ffffff;
   background-image: linear-gradient(rgba(232, 232, 232, 0.3) 1px, transparent 0),
@@ -103,7 +106,6 @@ html, body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-
   }
 
   .main {
@@ -112,7 +114,6 @@ html, body {
     display: grid;
     min-width: 375px;
     grid-template-columns: 3fr 1fr 1fr;
-
     .primaryColumn {
       box-sizing: border-box;
       border-right: 1px solid #eee;
@@ -120,13 +121,10 @@ html, body {
       position: relative;
     }
     .sidebarColumn {
-      height: 100vh;
+      height: calc(100vh);
       position: relative;
       box-sizing: border-box;
-      border-left: 1px solid #eee;
     }
-
-
   }
   .drawer-head {
     height: 100px;

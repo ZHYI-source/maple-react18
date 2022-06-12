@@ -20,10 +20,6 @@ const style = {
 };
 const App = () => {
     const [visible, setVisible] = useState(false)
-    const navigate = useNavigate()
-    const goRouter = (path) => {
-        navigate(path)
-    }
     //打开菜单
     const openMenu = () => {
         setVisible(true)
@@ -41,8 +37,9 @@ const App = () => {
             </section>
             <section className="main">
                 <section className="primaryColumn">
-                    <PrimaryTop openMenu={openMenu} onClose={onClose}/>
+                    <PrimaryTop openMenu={openMenu}  onClose={onClose}/>
                     <div>
+                        {/*路由内容渲染*/}
                         <Outlet/>
                     </div>
                 </section>

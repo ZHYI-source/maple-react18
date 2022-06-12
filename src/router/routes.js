@@ -1,9 +1,10 @@
 import _import from '../utils/util.import'
+import ArticleDetail from "../pages/home/article/articleDetail";
 
 const App = _import('app/app')
 const Notice = _import('notice/notice')
 const Home = _import('home/home')
-const ArticleDetail = _import('home/article/articleDetail')
+
 const NotFound = _import('404/notFound')
 
 //路由结构表
