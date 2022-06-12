@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import MarkdownIt from 'markdown-it';
 import MdEditor, {Plugins} from 'react-markdown-editor-lite';
 // import style manually
@@ -74,12 +73,18 @@ function onImageUpload(file) {
     // reader.readAsDataURL(file);
 }
 
-const MdEdit = () => {
+const MdEdit = (props) => {
+    const {views} = props
+    const [view, setView] = useState({menu: true, md: true, html: false})
+    useEffect(() => {
+        console.log(views)
+         setView(views)
+    })
     return (
         <div>
-            <MdEditor style={{height: '205px',borderRadius:'5px',overflow:'hidden'}}
+            <MdEditor style={{height: '205px', borderRadius: '5px', overflow: 'hidden'}}
                       plugins={plugins}
-                      view={{ menu: true, md: true, html: false }}
+                      view={view}
                       placeholder='Please enter your thoughts...'
                       renderHTML={renderHTML}
                       onImageUpload={onImageUpload}
