@@ -8,6 +8,9 @@ const ArticleDetail = () => {
 
     return (
         <section className='article-detail-box'>
+            <div className='article-detail-header'>
+                    文章标题
+            </div>
             <div className='article-detail-body'>
                 <ViewMd/>
             </div>
