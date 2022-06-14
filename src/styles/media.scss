@@ -18,11 +18,13 @@
       border-right: 1px solid #eee;
 
       .self-introduction {
+        width: 100%;
         height: 300px;
 
         .self-introduction-b {
-          width: 100% !important;
+          width: 373px !important;
           height: 300px;
+          box-sizing: border-box;
         }
       }
 
@@ -40,6 +42,9 @@
     }
 
 
+  }
+  .copyright {
+    width: 355px !important;
   }
   .view-md-box .rendMd {
     width: 375px !important;
