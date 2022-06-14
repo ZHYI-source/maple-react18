@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './home.scss'
-import Logo from '../../assets/logo.png'
+import bg from '../../assets/img/bg.png'
 import {Alert, Button, Divider, Popover} from "antd";
 import MdEdit from "../../components/mdEdit/mdEdit";
 import {CommentOutlined, EyeOutlined, LikeOutlined, SendOutlined, SubnodeOutlined} from "@ant-design/icons";
@@ -9,6 +9,7 @@ import {useNavigate} from "react-router-dom";
 import ViewMd from "../../components/viewMd/viewMd";
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 const avt = 'https://joeschmoe.io/api/v1/random'
+
 
 
 const Home = () => {
@@ -34,11 +35,8 @@ const Home = () => {
     return (
         <section className='post-list'>
             {/*主页发布*/}
-            <article className='post-item post-edit'>
-                <div className="item-left">
-                    <img alt='logo' src={avt}/>
-                </div>
-                <blockquote>
+            <article className=' post-edit'>
+                <blockquote style={{width:'50%',}}>
                     <ul>
                         <li>👋 Hi, I’m @周义</li>
                         <li>👀 I’m interested in front-end development</li>
@@ -48,7 +46,9 @@ const Home = () => {
                         <li>🚁 <a target='_blank' href='https://github.com/ZHYI-source'>Gitee</a></li>
                     </ul>
                 </blockquote>
-                <MdEdit/>
+                {/*<div style={{width:'50%', padding:"5px"}}>*/}
+                {/*    <img style={{width:'100%',height:'100%',objectFit:'scale-down'}} src={bg} alt="Maple"/>*/}
+                {/*</div>*/}
             </article>
             {
                 arr.map((item) => {

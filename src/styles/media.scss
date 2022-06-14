@@ -16,7 +16,14 @@
 
     .primaryColumn {
       border-right: 1px solid #eee;
+      .post-edit {
+        height: 300px;
 
+        blockquote {
+          width: 100%!important;
+          height: 300px;
+        }
+        }
       .primary-logo {
         display: inline-block !important;
       }
