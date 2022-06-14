@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Affix, Avatar, Input, List} from "antd";
 import './rightBar.scss'
 import {useSelector} from "react-redux";
+import Copyright from "../../../../components/copyright/copyright";
 
 const data = [
     {
@@ -19,21 +20,23 @@ const data = [
 ];
 const onSearch = (value) => console.log(value);
 const RightBar = () => {
-    const [top, setTop] = useState(70);
+    const [top, setTop] = useState(0);
     let runTimeInterval = useSelector((state) => state.system.runTimeInterval)
     return (
         <section className='right-bar'>
-            <div className='search-box'>
-                <Input
-                    placeholder="输入博文标题搜索"
-                    allowClear
-                    style={{
-                        height: 40,
-                        width: '100%',
-                        fontSize: 12
-                    }}
-                />
-            </div>
+            <Affix offsetTop={top}>
+                <div className='search-box'>
+                    <Input
+                        placeholder="输入博文标题搜索"
+                        allowClear
+                        style={{
+                            height: 40,
+                            width: '100%',
+                            fontSize: 12
+                        }}
+                    />
+                </div>
+            </Affix>
             <div className='right-bar-content'>
                 <div className='content-list'>
                     <h2>What’s happening</h2>
@@ -53,26 +56,18 @@ const RightBar = () => {
                         />
                     </div>
                 </div>
-                <Affix offsetTop={top}>
-                    {/*<div style={{margin:'8px'}}>*/}
-                    {/*    /!*<iframe name="weather_inc" title='天气' src="http://i.tianqi.com/?c=code&id=1" width="360" height="25"*!/*/}
-                    {/*    /!*        frameBorder="0" marginWidth="0" marginHeight="0" scrolling="no"></iframe>*!/*/}
-                    {/*    /!*<iframe width="360" height="90"  title='天气' frameBorder="0" scrolling="no" hspace="0"*!/*/}
-                    {/*    /!*        src="https://i.tianqi.com/?c=code&a=getcode&id=7&icon=1"></iframe>*!/*/}
-                    {/*    <iframe width="360" height="150" title='天气' frameBorder="0" scrolling="no" hspace="0"*/}
-                    {/*            src="https://i.tianqi.com/?c=code&a=getcode&id=21&icon=1"></iframe>*/}
-                    {/*</div>*/}
+                {/*<Affix offsetTop={top}>*/}
+                {/*    /!*<div style={{margin:'8px'}}>*!/*/}
+                {/*    /!*    /!*<iframe name="weather_inc" title='天气' src="http://i.tianqi.com/?c=code&id=1" width="360" height="25"*!/*!/*/}
+                {/*    /!*    /!*        frameBorder="0" marginWidth="0" marginHeight="0" scrolling="no"></iframe>*!/*!/*/}
+                {/*    /!*    /!*<iframe width="360" height="90"  title='天气' frameBorder="0" scrolling="no" hspace="0"*!/*!/*/}
+                {/*    /!*    /!*        src="https://i.tianqi.com/?c=code&a=getcode&id=7&icon=1"></iframe>*!/*!/*/}
+                {/*    /!*    <iframe width="360" height="150" title='天气' frameBorder="0" scrolling="no" hspace="0"*!/*/}
+                {/*    /!*            src="https://i.tianqi.com/?c=code&a=getcode&id=21&icon=1"></iframe>*!/*/}
+                {/*    /!*</div>*!/*/}
 
-                    <nav className='right-footer'>
-                        <ul>
-                            <li>Copyright ©2022 </li>
-                            <li>by<a href="https://gitee.com/Z568_568"> @书中枫叶 </a>.</li>
-                            <li> All rights reserved. | <a
-                                href="https://beian.miit.gov.cn/#/Integrated/index">黔ICP备2022001745号-1</a></li>
-                            <li>本站已运行：{runTimeInterval}</li>
-                        </ul>
-                    </nav>
-                </Affix>
+                {/*    <Copyright/>*/}
+                {/*</Affix>*/}
             </div>
 
         </section>

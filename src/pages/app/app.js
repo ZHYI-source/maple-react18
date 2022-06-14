@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Outlet, useNavigate} from "react-router-dom";
-import {Avatar, BackTop, Divider, Drawer, Input} from "antd";
+import {Affix, Avatar, BackTop, Divider, Drawer, Input} from "antd";
 import Header from "./moudel/header/header";
 import RightBar from "./moudel/rightBar/rightBar";
 import MenuList from "../../components/menuList/menuList";
@@ -45,8 +45,6 @@ const App = () => {
                             {/*路由内容渲染*/}
                             <Outlet/>
                         </div>
-
-
                     </section>
                     <section className="sidebarColumn">
                         <RightBar/>

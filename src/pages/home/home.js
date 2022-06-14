@@ -7,7 +7,7 @@ import SelfIntroduction from "../../components/selfIntroduction/selfIntroduction
 import Copyright from "../../components/copyright/copyright";
 import './home.scss'
 
-const arr = [1, 2, 3, 4,]
+const arr = [1, 2, 3, 4,5,6,7,8,9,10]
 const avt = 'https://joeschmoe.io/api/v1/random'
 
 const Home = () => {
