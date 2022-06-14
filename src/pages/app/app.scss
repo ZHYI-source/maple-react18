@@ -111,9 +111,11 @@ html, body {
   .main {
     box-sizing: border-box;
     width: 100%;
-    display: grid;
-    min-width: 375px;
-    grid-template-columns: 3fr 1fr 1fr;
+    .main-body {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr;
+      min-width: 375px;
+    }
     .primaryColumn {
       box-sizing: border-box;
       border-right: 1px solid #eee;

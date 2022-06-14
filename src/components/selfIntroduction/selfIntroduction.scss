@@ -18,5 +18,10 @@
     word-break: break-all;
     font-weight: bolder;
     font-family:TwitterChirp ;
+    ul {
+      li {
+        padding: 4px 0;
+      }
+    }
   }
 }

@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import {Outlet, useNavigate} from "react-router-dom";
-import {Avatar, BackTop, Drawer, Input} from "antd";
+import {Avatar, BackTop, Divider, Drawer, Input} from "antd";
 import Header from "./moudel/header/header";
 import RightBar from "./moudel/rightBar/rightBar";
 import MenuList from "../../components/menuList/menuList";
 import HeaderSearch from "./moudel/headerSearch/headerSearch";
 import './app.scss'
 import PrimaryTop from "./moudel/primaryTop/primaryTop";
+import Copyright from "../../components/copyright/copyright";
+import {Provider} from "react-redux";
 
 const style = {
     height: 30,
@@ -36,16 +38,23 @@ const App = () => {
                 <Header/>
             </section>
             <section className="main">
-                <section className="primaryColumn">
-                    <PrimaryTop openMenu={openMenu}  onClose={onClose}/>
-                    <div>
-                        {/*路由内容渲染*/}
-                        <Outlet/>
-                    </div>
-                </section>
-                <section className="sidebarColumn">
-                    <RightBar/>
-                </section>
+                <div className="main-body">
+                    <section className="primaryColumn">
+                        <PrimaryTop openMenu={openMenu}  onClose={onClose}/>
+                        <div>
+                            {/*路由内容渲染*/}
+                            <Outlet/>
+                        </div>
+
+
+                    </section>
+                    <section className="sidebarColumn">
+                        <RightBar/>
+                    </section>
+                </div>
+                <Divider/>
+                {/* 版权以及系统运行*/}
+                <Copyright/>
             </section>
             {/*    右侧抽屉*/}
             <Drawer title="Maple" width={255} placement="right" onClose={onClose} visible={visible}>

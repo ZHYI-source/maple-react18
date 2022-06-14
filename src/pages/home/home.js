@@ -1,19 +1,14 @@
 import React, {useState} from 'react';
-import './home.scss'
-import bg from '../../assets/img/bg.png'
-import {Alert, Button, Divider, Popover} from "antd";
-import MdEdit from "../../components/mdEdit/mdEdit";
-import {CommentOutlined, EyeOutlined, LikeOutlined, SendOutlined, SubnodeOutlined} from "@ant-design/icons";
-import Marquee from 'react-fast-marquee';
 import {useNavigate} from "react-router-dom";
-import ViewMd from "../../components/viewMd/viewMd";
-import {Declaration} from "postcss";
+import {useSelector} from "react-redux";
+import {Divider, Popover} from "antd";
+import {CommentOutlined, EyeOutlined, LikeOutlined} from "@ant-design/icons";
 import SelfIntroduction from "../../components/selfIntroduction/selfIntroduction";
-import {Loading} from "../../components/loading/loading";
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+import Copyright from "../../components/copyright/copyright";
+import './home.scss'
+
+const arr = [1, 2, 3, 4,]
 const avt = 'https://joeschmoe.io/api/v1/random'
-
-
 
 const Home = () => {
 
@@ -26,21 +21,23 @@ const Home = () => {
         setVisible(newVisible);
     };
 
-    const goRouter=(path)=>{
+    const goRouter = (path) => {
         navigate(path)
     }
-
+    let runTimeInterval = useSelector((state) => state.system.runTimeInterval)
     return (
         <section className='post-list'>
             {/*自我介绍*/}
             <SelfIntroduction/>
-            <div className='home-post-class' style={{backgroundColor:'#eee'}}>
-                <h3 className='home-post-class' style={{paddingLeft:'15px',lineHeight:'50px'}}>🌱 推荐 {arr.length}</h3>
+            <div className='home-post-class'>
+                <h3 className='home-post-h'>🪐 推荐</h3>
             </div>
             <Divider/>
             {
                 arr.map((item) => {
-                    return <article className='post-item' key={item} onClick={()=>{goRouter('/articleDetail')}}>
+                    return <article className='post-item' key={item} onClick={() => {
+                        goRouter('/articleDetail')
+                    }}>
                         <div className="item-left">
                             <img alt='logo' src={avt}/>
                         </div>

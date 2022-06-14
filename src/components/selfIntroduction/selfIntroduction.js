@@ -5,7 +5,7 @@ const SelfIntroduction = () => {
         <section className='self-introduction'>
             <blockquote className='self-introduction-b' style={{width:'50%',}}>
                 <ul>
-                    <li>👋 Hi, I’m @周义</li>
+                    <li>👋 Hi, I’m @书中枫叶 </li>
                     <li>🚁 欢迎访问我的博客</li>
                     <li>👀 I’m interested in front-end development</li>
                     <li>🌱 I’m currently learning <code style={{color:"blue"}}>React.v18/Node.js/Mysql</code></li>

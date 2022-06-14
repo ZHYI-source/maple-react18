@@ -1,7 +1,17 @@
 .post-list {
   box-sizing: border-box;
   //padding-top: 15px;
+  .home-post-class {
+    background: #00d2ff;
+    background: -webkit-linear-gradient(to right,#fff, rgba(165, 161, 187, 0.84),rgba(151, 218, 238, 0.83),#fff);
+    background: linear-gradient(to right,#fff, rgba(165, 161, 187, 0.84),rgba(151, 218, 238, 0.83),#fff);
 
+    .home-post-h {
+      line-height: 48px;
+      padding-left: 15px;
+      font-family: TwitterChirpExtendedHeavy;
+    }
+  }
   .home-notice {
     padding: 10px;
   }
