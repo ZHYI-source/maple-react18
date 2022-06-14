@@ -7,6 +7,9 @@ import {CommentOutlined, EyeOutlined, LikeOutlined, SendOutlined, SubnodeOutline
 import Marquee from 'react-fast-marquee';
 import {useNavigate} from "react-router-dom";
 import ViewMd from "../../components/viewMd/viewMd";
+import {Declaration} from "postcss";
+import SelfIntroduction from "../../components/selfIntroduction/selfIntroduction";
+import {Loading} from "../../components/loading/loading";
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 const avt = 'https://joeschmoe.io/api/v1/random'
 
@@ -26,30 +29,15 @@ const Home = () => {
     const goRouter=(path)=>{
         navigate(path)
     }
-    const md = `
-- 👋 Hi, I’m @周义
-- 👀 I’m interested in front-end development
-- 🌱 I’m currently learning \`React.v18/node.js/mysql\`
-- 📫 How to reach me www.zhouyi.run
-    `
+
     return (
         <section className='post-list'>
-            {/*主页发布*/}
-            <article className=' post-edit'>
-                <blockquote style={{width:'50%',}}>
-                    <ul>
-                        <li>👋 Hi, I’m @周义</li>
-                        <li>👀 I’m interested in front-end development</li>
-                        <li>🌱 I’m currently learning <code style={{color:"burlywood"}}>React.v18/node.js/mysql</code></li>
-                        <li>📫 How to reach me <a target='_blank' href='http://www.zhouyi.run/#/'>主页</a></li>
-                        <li>🚁 欢迎访问我的博客</li>
-                        <li>🚁 <a target='_blank' href='https://github.com/ZHYI-source'>Gitee</a></li>
-                    </ul>
-                </blockquote>
-                {/*<div style={{width:'50%', padding:"5px"}}>*/}
-                {/*    <img style={{width:'100%',height:'100%',objectFit:'scale-down'}} src={bg} alt="Maple"/>*/}
-                {/*</div>*/}
-            </article>
+            {/*自我介绍*/}
+            <SelfIntroduction/>
+            <div className='home-post-class' style={{backgroundColor:'#eee'}}>
+                <h3 className='home-post-class' style={{paddingLeft:'15px',lineHeight:'50px'}}>🌱 推荐 {arr.length}</h3>
+            </div>
+            <Divider/>
             {
                 arr.map((item) => {
                     return <article className='post-item' key={item} onClick={()=>{goRouter('/articleDetail')}}>
