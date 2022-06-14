@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
-import {useNavigate} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {NavLink, useLocation, useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {Divider, Popover} from "antd";
 import {CommentOutlined, EyeOutlined, LikeOutlined} from "@ant-design/icons";
 import SelfIntroduction from "../../components/selfIntroduction/selfIntroduction";
 import Copyright from "../../components/copyright/copyright";
 import './home.scss'
+import {dirArticle} from "../../api/article";
 
-const arr = [1, 2, 3, 4,5,6,7,8,9,10]
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const avt = 'https://joeschmoe.io/api/v1/random'
+
 
 const Home = () => {
 
@@ -24,7 +26,29 @@ const Home = () => {
     const goRouter = (path) => {
         navigate(path)
     }
-    let runTimeInterval = useSelector((state) => state.system.runTimeInterval)
+
+    const [articles, setArticles] = useState([]);
+    const [query, setQuery] = useState({ //查询推荐并且按是否顶置查询
+        params: {
+            isRecommend: true
+        },
+        limit: 10,//每页条数
+        offset: 1,//当前页
+        sort: {
+            prop: 'isTop',
+            order: 'desc',
+        }
+    });
+
+    function getDataList() {
+        dirArticle(query).then(res => {
+            setArticles(res.data);
+        })
+    }
+
+    useEffect( () => {
+        getDataList()
+    },[]);
     return (
         <section className='post-list'>
             {/*自我介绍*/}
@@ -34,10 +58,9 @@ const Home = () => {
             </div>
             <Divider/>
             {
-                arr.map((item) => {
-                    return <article className='post-item' key={item} onClick={() => {
-                        goRouter('/articleDetail')
-                    }}>
+                articles.map((item) => {
+                    return <NavLink to={{ pathname : `/articleDetail`, state : { id: item.id}}} key={item.id} >
+                        <article className='post-item'  >
                         <div className="item-left">
                             <img alt='logo' src={avt}/>
                         </div>
@@ -61,29 +84,26 @@ const Home = () => {
 
                             <div className='body-post'>
                                 <div className='post-title'>
-
-                                    忘记明天的日子
+                                    {item.article_title}
                                 </div>
                                 <div className='post-content'>
-                                    Statements of actor Salman Khan and his father Salim Khan have been recorded by
-                                    Mumbai Police after the actor received a threat letter yesterday, June 5. Statements
-                                    of a total of 4 people have been recorded so far: Mumbai Police
+                                    {item.article_summary}
                                 </div>
                             </div>
                             <div className='body-opt'>
                                 <div className='opt-item'>
-                                    <CommentOutlined/> 32
+                                    <CommentOutlined/> {item.commentsCount}
                                 </div>
                                 <div className='opt-item'>
-                                    <EyeOutlined/> 99+
+                                    <EyeOutlined/> {item.viewsCount}
                                 </div>
-                                <div className='opt-item'>
-                                    <LikeOutlined/> 99+
-                                </div>
-
+                                {/*<div className='opt-item'>*/}
+                                {/*    <LikeOutlined/> {item.viewsCount}*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                     </article>
+                    </NavLink>
                 })
             }
         </section>

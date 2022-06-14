@@ -76,11 +76,9 @@
           }
         }
       }
-
       .body-post {
         padding: 5px;
         cursor: pointer;
-
         .post-title {
           font-size: 16px;
           color: rgb(40, 51, 59);
@@ -89,10 +87,10 @@
           border-bottom: 1px dashed #eee;
           padding: 10px 0px;
         }
-
         .post-content {
           padding-top: 10px;
-          font-size: 15px;
+          padding-bottom: 25px;
+          font-size: 13px;
           color: rgb(40, 51, 59);
           overflow-wrap: break-word;
         }
