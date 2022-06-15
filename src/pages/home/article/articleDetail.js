@@ -1,24 +1,35 @@
-import React, {useEffect} from 'react';
-import CommentBoard from "../../../components/commentBoard/commentBoard";
+import React, {useEffect, useState} from 'react';
 import ViewMd from "../../../components/viewMd/viewMd";
 import './articleDetail.scss'
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import ViewHtml from "../../../components/viewHtml/viewHtml";
+import {Spin} from "antd";
 
 //文章详情
 const ArticleDetail = (props) => {
-    const loc = useLocation()
-    const locs = useParams()
-    useEffect(()=>{
-        console.log(loc)
-        console.log(locs)
-    },[])
+    const articleData = useLocation()
+    const [article, setArticle] = useState({})
+    useEffect(() => {
+        setArticle(articleData.state.detail)
+    }, [])
     return (
         <section className='article-detail-box'>
             <div className='article-detail-header'>
-                    文章标题
+                {article.article_title}
             </div>
+
             <div className='article-detail-body'>
-                <ViewMd/>
+                {
+                    article.id ?
+                        article.editType === 'mce' ?
+                            <ViewHtml content={article.article_content}/> :
+                            <ViewMd content={article.article_content}/>
+                        :
+                        <Spin tip='加载中...' style={{position: "relative", top: '50%', left: '50%'}}/>
+                }
+            </div>
+            <div>
+
             </div>
             {/*<div className='article-comments'>*/}
             {/*    <CommentBoard/>*/}

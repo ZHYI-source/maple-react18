@@ -21,7 +21,7 @@ const ViewMd = (props) => {
             <ReactMarkdown
                            className='rendMd'
                            rehypePlugins={[rehypeHighlight,remarkGfm]}
-                           children={props.md}
+                           children={props.content}
                            >
             </ReactMarkdown>
         </section>
