@@ -4,7 +4,7 @@ import {post} from "./http";
 
 //文章列表
 export const dirArticle = (data) =>
-    post("/api/public/web/article/list", data);
+    post("/mg/api/public/web/article/list", data);
 //文章详情
 export const getArticleDetail = (id) =>
     post("/mg/api/public/web/article/detail", {id});
