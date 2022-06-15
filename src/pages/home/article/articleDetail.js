@@ -3,7 +3,7 @@ import ViewMd from "../../../components/viewMd/viewMd";
 import './articleDetail.scss'
 import {useLocation} from "react-router-dom";
 import ViewHtml from "../../../components/viewHtml/viewHtml";
-import {Spin} from "antd";
+import {Divider, Spin} from "antd";
 
 //文章详情
 const ArticleDetail = (props) => {
@@ -17,7 +17,7 @@ const ArticleDetail = (props) => {
             <div className='article-detail-header'>
                 {article.article_title}
             </div>
-
+            <Divider/>
             <div className='article-detail-body'>
                 {
                     article.id ?
