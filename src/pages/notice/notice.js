@@ -5,7 +5,7 @@ import {Counter} from "../../components/counter";
 import { setIsLoading } from '../../store/models/counterSlice'
 import Marquee from "react-fast-marquee";
 
-const Notice = () => {
+const Notice = (props) => {
     const dispatch = useDispatch()
     function getVuex (){
         dispatch(setIsLoading({msg:'后会过去不如风斗将来',isL:false}))
