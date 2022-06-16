@@ -48,6 +48,8 @@ const Home = () => {
     useEffect(() => {
         getDataList()
     }, []);
+
+
     return (
         <section className='post-list'>
             {/*自我介绍*/}

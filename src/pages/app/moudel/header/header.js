@@ -18,10 +18,10 @@ const Header = (props) => {
                 <span className='item-icon'>#</span>
                 <span className='item-name'>Home</span>
             </div>
-            {/*<div className='nav-item' onClick={()=>goRouter('/notice')}>*/}
-            {/*    <span className='item-icon'>#</span>*/}
-            {/*    <span className='item-name'>Notifications</span>*/}
-            {/*</div>*/}
+            <div className='nav-item' onClick={()=>goRouter('/notice')}>
+                <span className='item-icon'>#</span>
+                <span className='item-name'>Notifications</span>
+            </div>
             {/*<div className='nav-item'>*/}
             {/*    <span className='item-icon'>#</span>*/}
             {/*    <span className='item-name'>List</span>*/}
