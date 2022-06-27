@@ -15,7 +15,7 @@ import {getTimeInterval} from "../utils/util.sys";
 export default function RootContainer() {
     const dispatch = useDispatch()
     // 后台获取系统运行时间
-    const runAt = '1644422400000'; //2022-02-10 00:00:00
+    const runAt = '1653264000000'; //2022-05-20 00:00:00
     function initRunTime() {
         //初始化运行时间
         setInterval(() => {

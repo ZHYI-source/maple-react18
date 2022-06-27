@@ -22,15 +22,15 @@ const Header = (props) => {
                 <span className='item-icon'>#</span>
                 <span className='item-name'>Notifications</span>
             </div>
-            <div className='nav-item'>
-                <span className='item-icon'>#</span>
-                <span className='item-name'>List</span>
-            </div>
-            <div className='nav-item'>
-                <span className='item-icon'>#</span>
-                <span className='item-name'>More</span>
-            </div>
-            <Button type="primary" size='large' shape="round"  className='head-btn'>Tweet</Button>
+            {/*<div className='nav-item'>*/}
+            {/*    <span className='item-icon'>#</span>*/}
+            {/*    <span className='item-name'>List</span>*/}
+            {/*</div>*/}
+            {/*<div className='nav-item'>*/}
+            {/*    <span className='item-icon'>#</span>*/}
+            {/*    <span className='item-name'>More</span>*/}
+            {/*</div>*/}
+            {/*<Button type="primary" size='large' shape="round"  className='head-btn'>Tweet</Button>*/}
         </nav>
     );
 }
