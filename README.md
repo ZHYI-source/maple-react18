@@ -5,15 +5,16 @@
 <p align="center">
 这是一个使用 create-react-app创建的 React 脚手架<br/>
 标准的 React+Redux 分层结构<br/>
-重拾React知识，将不停的更新和优化本项目。
+ React-router-v6 最新路由配置<br/>
+学习React18新知识，采用函数组件构建页面，将不停的更新和优化本项目。
 </p>
 <p align="center">
-  <a href="https://gitee.com/Z568_568/maple.git">
-    <img src="https://gitee.com/Z568_568/all-blog-sys/badge/star.svg?theme=dark" alt="maintained with Ranger" />  
-  </a>
-  <a href="https://gitee.com/Z568_568/maple.git">
-    <img src="https://gitee.com/Z568_568/all-blog-sys/badge/fork.svg?theme=dark" alt="MIT License"/>
-  </a> 
+ <a href='https://gitee.com/Z568_568/maple-react/stargazers'>
+<img src='https://gitee.com/Z568_568/maple-react/badge/star.svg?theme=dark' alt='star'></img>
+</a>
+<a href='https://gitee.com/Z568_568/maple-react/members'>
+<img src='https://gitee.com/Z568_568/maple-react/badge/fork.svg?theme=dark' alt='fork'></img>
+</a>
 <a href="https://gitee.com/Z568_568/maple.git">
     <img src="https://img.shields.io/badge/Star-99+-red" alt="maintained with Ranger" />  
   </a>
@@ -22,6 +23,9 @@
   </a>
 </p>
 
+## 预览地址 Demo
+
+<a href="http://www.zhouyi.run:5226/" target="_blank">" 书中枫叶 "</a>
 
 **技术栈及版本信息**
 
@@ -39,7 +43,7 @@
 ``` 
 npm install		# 安装依赖模块
 
-npm run start		# 运行开发环境: http://localhost:8888
+npm run start		# 运行开发环境
 npm run build		# 正式打包，用于生产环境
 npm run eject		# 列出隐藏webpack配置文件
 
@@ -50,10 +54,6 @@ npm run eject		# 列出隐藏webpack配置文件
 ```
 .
 ├── build				        # 正式打包后，会自动生成该文件夹，其中会包含最终用于生产环境的文件
-│   ├── dist				    # 编译后的资源文件
-│   ├── icons				# 编译后自动生成的各尺寸favicon图标
-│   ├── index.html			# 编译后的主页html
-├── mock				        # mock测试数据
 ├── public				        # 静态文件，index.html等
 ├── src                                 # 项目代码目录
 │   ├── components                     # 所有的公共类UI组件
@@ -69,11 +69,11 @@ npm run eject		# 列出隐藏webpack配置文件
 |   ├── ├── home.js                    # 状态管理主文件
 │   ├── util                            # 自定义工具
 │   ├── home.js                        # 项目入口JS
-├── webpack.dev.config.js		# 用于开发环境的webpack配置
-└── webpack.production.config.js	# 用于生产环境正式打包的webpack配置
 └── setupProxy.js                       # 代理中间件
 ```
 
-## 预览地址 Demo
+#### 项目截图
 
-<a href="http://www.zhouyi.run" target="_blank">" 书中枫叶 "</a>
+ <img src="doc/1.png" width = "300" height = "150" alt="图片名称" align=center />
+ <img src="doc/2.png" width = "300" height = "150" alt="图片名称" align=center />
+ <img src="doc/3.png" width = "300" height = "150" alt="图片名称" align=center />
